@@ -1,0 +1,14 @@
+.dashboard-sidebar{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left:4%;
+
+}
+.dashboard-sidebar li{
+  padding:3%;
+}
+.dashboard-sidebar li a{
+  text-decoration: none;
+}
