@@ -6,14 +6,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item btn btn-outline-warning">
-          <a routerLink="" class="nav-link" aria-current="page">Home</a>
+        <li class="nav-item ">
+          <a routerLink="" class="nav-link btn btn-outline-warning" aria-current="page">Home</a>
         </li>
-        <li class="nav-item btn btn-outline-warning">
-          <a routerLink="products" class="nav-link" href="#">Products</a>
+        <li class="nav-item ">
+          <a routerLink="products" class="nav-link btn btn-outline-warning" href="#">Products</a>
         </li>
-        <li class="nav-item dropdown btn btn-outline-warning">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle  btn btn-outline-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Basket
           </a>
           <ul class="dropdown-menu">
@@ -23,8 +23,8 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item btn btn-outline-warning">
-          <a routerLink="/admin"class="nav-link">Yönetim Paneli</a>
+        <li class="nav-item ">
+          <a routerLink="/admin"class="nav-link btn btn-outline-warning">Yönetim Paneli</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -43,4 +43,5 @@
   <div class="col-1">
   </div>
 </div>
-
+<ngx-spinner name='sq1' bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-square-spin" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+<ngx-spinner name="circle-loading" type="ball-scale-multiple"><p style="color: white" > Loading... </p></ngx-spinner>

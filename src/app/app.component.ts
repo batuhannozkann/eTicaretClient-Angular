@@ -9,14 +9,14 @@ declare var $:any;
 export class AppComponent {
   title = 'eTicaretClient';
 }
-$(window).on('resize',()=>{
-  if($(window).width()<960){
-    $('.nav-item').removeClass('btn btn-outline-warning')
-  }
-});
-$(window).on('resize',()=>{
-  if($(window).width()>960){
-    $('.nav-item').addClass('btn btn-outline-warning')
-  }
-});
+// $(window).on('resize',()=>{
+//   if($(window).width()<960){
+//     $('.nav-item').removeClass('btn btn-outline-warning')
+//   }
+// });
+// $(window).on('resize',()=>{
+//   if($(window).width()>960){
+//     $('.nav-item').addClass('btn btn-outline-warning')
+//   }
+// });
 

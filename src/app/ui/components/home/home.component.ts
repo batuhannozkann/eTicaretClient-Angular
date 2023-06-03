@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MessageType, ToastrPosition, ToastrpackageService } from 'src/app/services/ui/toastrpackage.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  constructor(private toastr:ToastrpackageService){
+    toastr.showSuccess("Baslik","İçerik",MessageType.Success,ToastrPosition.TopRight);
+  }
 }
