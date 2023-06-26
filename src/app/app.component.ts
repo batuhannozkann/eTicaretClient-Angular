@@ -9,6 +9,11 @@ declare var $:any;
 export class AppComponent {
   title = 'eTicaretClient';
 }
+// $.ajax({
+//   method:"GET",
+//   url:"https://localhost:7118/api/Test/GetProducts"
+
+// }).then((data)=>{console.log(data)});
 // $(window).on('resize',()=>{
 //   if($(window).width()<960){
 //     $('.nav-item').removeClass('btn btn-outline-warning')
@@ -19,4 +24,3 @@ export class AppComponent {
 //     $('.nav-item').addClass('btn btn-outline-warning')
 //   }
 // });
-

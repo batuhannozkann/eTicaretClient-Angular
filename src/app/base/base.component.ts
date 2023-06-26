@@ -5,9 +5,10 @@ export class BaseComponent {
   }
   showSpinner(spinnerName:SpinnerName){
     this.ngxSpinner.show(spinnerName);
-    setTimeout(()=>{
-      this.ngxSpinner.hide(spinnerName);
-    },5000);
+  }
+  hideSpinner(spinnerName:SpinnerName)
+  {
+    this.ngxSpinner.hide(spinnerName);
   }
 }
 export enum SpinnerName{

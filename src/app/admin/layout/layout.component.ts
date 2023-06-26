@@ -13,7 +13,6 @@ export class LayoutComponent extends BaseComponent  {
   constructor(private alertify:AlertifyService,spinnerService:NgxSpinnerService){
     super(spinnerService)
     this.alertify.message("Giriş yapildi",MessageType.Success);
-    this.showSpinner(SpinnerName.CircleLoading);
 
   }
   //  ngOnInit():void{

@@ -1,14 +1,16 @@
-.dashboard-sidebar{
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left:4%;
-
+#sidebarmenu{
+  height:calc(100vh - 117.33px);
 }
-.dashboard-sidebar li{
-  padding:3%;
+.sidebar-collapse{
+  transition: all .45s !important;
 }
-.dashboard-sidebar li a{
-  text-decoration: none;
+.sidebar-btn{
+  margin-left: 0.4rem;
+  display:inline-block;
+}
+.sidebar-btn:hover{
+  opacity: 1 !important;
+}
+.active{
+  background-color : #FFC107!important;
 }
