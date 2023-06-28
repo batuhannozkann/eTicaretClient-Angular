@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,EventEmitter, Output } from '@angular/core';
 import {NgxSpinnerService} from 'ngx-spinner'
 import { EmptyError, defaultIfEmpty, isEmpty } from 'rxjs';
 import { BaseComponent, SpinnerName } from 'src/app/base/base.component';
@@ -16,6 +16,8 @@ export class CreateComponent extends BaseComponent {
   {
     super(spinner)
   }
+  @Output() createdProduct:EventEmitter<Create_Product> = new EventEmitter();
+
   createProduct(name:HTMLInputElement,stock:HTMLInputElement,price:HTMLInputElement)
   {
       this.showSpinner(SpinnerName.CircleLoading)
@@ -26,6 +28,7 @@ export class CreateComponent extends BaseComponent {
      this.productService.create(createProduct,()=>{
       this.hideSpinner(SpinnerName.CircleLoading);
       this.alertifyService.message("Product created successfully",MessageType.Success)
+      this.createdProduct.emit(createProduct);
     },(errorMessage)=>{
       this.hideSpinner(SpinnerName.CircleLoading)
       this.alertifyService.message(errorMessage,MessageType.Error)})

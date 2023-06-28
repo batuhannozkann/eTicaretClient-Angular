@@ -7,6 +7,10 @@ declare var $:any;
 })
 export class SidebarComponent {
 
+  toggleSideBar()
+  {
+    $("#sidebarmenu").animate({width:'toggle'},500);
+  }
 }
 $(document).click(function(){
   if(window.location.pathname.includes("orders"))

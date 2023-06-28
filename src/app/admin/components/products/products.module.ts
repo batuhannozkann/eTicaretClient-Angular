@@ -9,6 +9,10 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import{DataTablesModule} from 'angular-datatables'
+import { DeleteDirective } from 'src/app/directives/admin/delete.directive';
+import { EditDirective } from 'src/app/directives/admin/edit.directive';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dialog.component';
 
 
 
@@ -19,6 +23,9 @@ import{DataTablesModule} from 'angular-datatables'
     ProductsComponent,
     CreateComponent,
     ListComponent,
+    DeleteDirective,
+    EditDirective,
+    DeleteDialogComponent
   ],
   imports: [
     CommonModule,
@@ -30,6 +37,7 @@ import{DataTablesModule} from 'angular-datatables'
     MatPaginatorModule,
     MatSortModule,
     DataTablesModule,
+    MatDialogModule
   ]
 })
 export class ProductsModule { }

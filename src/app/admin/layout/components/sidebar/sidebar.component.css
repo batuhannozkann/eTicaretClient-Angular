@@ -1,9 +1,6 @@
 #sidebarmenu{
   height:calc(100vh - 117.33px);
 }
-.sidebar-collapse{
-  transition: all .45s !important;
-}
 .sidebar-btn{
   margin-left: 0.4rem;
   display:inline-block;

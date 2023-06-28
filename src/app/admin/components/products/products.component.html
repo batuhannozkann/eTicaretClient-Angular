@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-3 pt-5" >
     <router-outlet>
-      <app-create></app-create>
+      <app-create (createdProduct)="createdProduct($event)"></app-create>
     </router-outlet>
   </div>
   <div class="col-md-9">
