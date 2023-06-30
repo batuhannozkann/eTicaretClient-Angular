@@ -36,7 +36,7 @@ export class HttpClientService {
       url=requestParameters.fullEndPoint;
     }
     else{
-      url=`${this.baseUrl}/${requestParameters.controller}`;
+      url=`${this.baseUrl}/${requestParameters.controller}${requestParameters.action?`/${requestParameters.action}`:""}`;
     }
     return this.httpClient.post<T>(url,body,{headers:requestParameters.headers});
   }

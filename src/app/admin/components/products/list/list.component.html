@@ -52,7 +52,7 @@
       </ng-container>
       <ng-container matColumnDef="Delete">
         <th mat-header-cell *matHeaderCellDef>  </th>
-        <td mat-cell [id]="element.id" *matCellDef="let element" appDelete (callback)="onChanged()">
+        <td mat-cell controller="products" [id]="element.id" *matCellDef="let element" appDelete (callback)="onChanged()">
           </td>
       </ng-container>
       <ng-container matColumnDef="Edit">
@@ -65,7 +65,7 @@
       <tr mat-row *matRowDef="let row; columns:displayedColumns;"></tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[5,8,10,16,20]"
+    <mat-paginator [pageSizeOptions]="[10,16,20]"
                    showFirstLastButtons
                    aria-label="Select page of periodic elements"
                    (page)="onChanged()">

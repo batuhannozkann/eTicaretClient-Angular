@@ -10,6 +10,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { DeleteDialogComponent } from './dialogs/delete-dialog/delete-dialog.component';
+import { FileUploadDialogComponent } from './dialogs/file-upload-dialog/file-upload-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { DeleteDialogComponent } from './dialogs/delete-dialog/delete-dialog.com
     AppRoutingModule,
     AdminModule,UiModule,
     NgxSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     {provide: "baseUrl", useValue:"https://localhost:7118/api" ,multi:true}

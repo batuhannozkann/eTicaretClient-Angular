@@ -13,6 +13,10 @@ import { DeleteDirective } from 'src/app/directives/admin/delete.directive';
 import { EditDirective } from 'src/app/directives/admin/edit.directive';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dialog.component';
+import { FileUploadModule } from 'src/app/services/common/file-upload/file-upload.module';
+import { DialogModule } from '@angular/cdk/dialog';
+import { FileUploadDialogComponent } from 'src/app/dialogs/file-upload-dialog/file-upload-dialog.component';
+import { DialogsModule } from 'src/app/dialogs/dialogs.module';
 
 
 
@@ -25,7 +29,6 @@ import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dial
     ListComponent,
     DeleteDirective,
     EditDirective,
-    DeleteDialogComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +40,9 @@ import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dial
     MatPaginatorModule,
     MatSortModule,
     DataTablesModule,
-    MatDialogModule
+    MatDialogModule,
+    FileUploadModule,
+    DialogsModule
   ]
 })
 export class ProductsModule { }

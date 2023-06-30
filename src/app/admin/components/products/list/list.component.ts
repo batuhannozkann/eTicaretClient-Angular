@@ -38,7 +38,7 @@ constructor(private productService:ProductService,spinner:NgxSpinnerService,priv
   }
   async getProducts()
   {
-    const allProducts: {totalCount:number ; products:List_Product[]} = await this.productService.read(this.paginator?this.paginator.pageIndex:0,this.paginator?this.paginator.pageSize:5,()=>{
+    const allProducts: {totalCount:number ; products:List_Product[]} = await this.productService.read(this.paginator?this.paginator.pageIndex:0,this.paginator?this.paginator.pageSize:10,()=>{
       this.hideSpinner(SpinnerName.CircleLoading);
       console.log("okey");
     },message=>{

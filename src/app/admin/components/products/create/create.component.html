@@ -12,5 +12,6 @@
     <label for="price">Price</label>
     <input  type="text" class="form-control" id="price" #price placeholder="Price">
   </div>
+  <app-file-upload [selectedOptions]="selectedOptions"></app-file-upload>
   <button (click)="createProduct(name,stock,price)" class="btn btn-primary">Create</button>
 

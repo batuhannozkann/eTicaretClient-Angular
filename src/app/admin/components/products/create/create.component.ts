@@ -1,9 +1,11 @@
-import { Component,EventEmitter, Output } from '@angular/core';
+import { Component,EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { NgxFileDropEntry } from 'ngx-file-drop';
 import {NgxSpinnerService} from 'ngx-spinner'
 import { EmptyError, defaultIfEmpty, isEmpty } from 'rxjs';
 import { BaseComponent, SpinnerName } from 'src/app/base/base.component';
 import { Create_Product } from 'src/app/contracts/create_product';
 import { AlertifyService, MessageType } from 'src/app/services/admin/alertify.service';
+import { FileUploadComponent, FileUploadOptions } from 'src/app/services/common/file-upload/file-upload.component';
 import { ProductService } from 'src/app/services/common/models/product.service';
 
 @Component({
@@ -16,8 +18,14 @@ export class CreateComponent extends BaseComponent {
   {
     super(spinner)
   }
+  @ViewChild(FileUploadComponent) fileUploadComponent:FileUploadComponent;
   @Output() createdProduct:EventEmitter<Create_Product> = new EventEmitter();
-
+  @Output() selectedOptions:Partial<FileUploadOptions> = {
+      controller:"products",
+      action:"upload",
+      explain:"Resim Dosyaları vb vb",
+  }
+    public imgFiles:NgxFileDropEntry[];
   createProduct(name:HTMLInputElement,stock:HTMLInputElement,price:HTMLInputElement)
   {
       this.showSpinner(SpinnerName.CircleLoading)
@@ -33,5 +41,9 @@ export class CreateComponent extends BaseComponent {
       this.hideSpinner(SpinnerName.CircleLoading)
       this.alertifyService.message(errorMessage,MessageType.Error)})
   }
-  }
+      uploadFile(files:NgxFileDropEntry[])
+        {
+          this.fileUploadComponent.uploadSelectedFile(files);
+        }
+      }
 

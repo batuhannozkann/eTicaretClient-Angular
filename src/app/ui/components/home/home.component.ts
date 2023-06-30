@@ -8,6 +8,6 @@ import { MessageType, ToastrPosition, ToastrpackageService } from 'src/app/servi
 })
 export class HomeComponent {
   constructor(private toastr:ToastrpackageService){
-    toastr.showSuccess("Baslik","İçerik",MessageType.Success,ToastrPosition.TopRight);
+
   }
 }
